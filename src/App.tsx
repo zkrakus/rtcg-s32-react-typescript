@@ -14,7 +14,7 @@ function App() {
     });
   };
 
-  const deleteToDoHandler = (id: string) => {
+  const removeTodoHandler = (id: string) => {
     setTodos((prevTodos) => {
       return prevTodos.filter((todo) => todo.id !== id)
     })
@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <NewToDos onAddTodo={addTodoHandler}/>
-      <Todos items={todos} onDeleteTodo={deleteToDoHandler} />
+      <Todos items={todos} onRemoveTodo={removeTodoHandler} />
     </div>
   );
 }
